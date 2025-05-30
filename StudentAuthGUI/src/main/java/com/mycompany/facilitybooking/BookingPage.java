@@ -107,15 +107,15 @@ public class BookingPage {
 
         //load image from classpath resource 
         try {
-            String imagePath = facility.getImagePath(); // Now with leading slash for absolute path
-            // Use getClass().getResource() which handles the leading slash correctly
+            String imagePath = facility.getImagePath(); 
+            
             var resourceUrl = getClass().getResource(imagePath);
             if (resourceUrl != null) {
                 Image image = new Image(resourceUrl.toExternalForm());
                 imageView.setImage(image);
             } else {
                 System.out.println("Image not found: " + imagePath);
-                // Try alternative loading method as fallback
+                
                 var is = getClass().getResourceAsStream(imagePath);
                 if (is != null) {
                     Image image = new Image(is);
