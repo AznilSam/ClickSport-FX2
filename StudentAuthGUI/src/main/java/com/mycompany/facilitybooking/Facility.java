@@ -51,7 +51,7 @@ public class Facility {
 
     public String getImagePath() {
         return imagePath;
-    } // getter for image path (gambar)
+    } //getter for image path (gambar)
 
     public String toCSV() {
         return facilityNo + "," + name + "," + capacity + "," + pricePerHour + "," + openTime + "," + closeTime + "," + isAvailable + "," + imagePath;
