@@ -68,14 +68,12 @@ public class ReceiptPage extends Stage {
 
             //add QR code image (dummy)
             try {
-                // Use getClass().getResource() with leading slash for absolute path
                 var resourceUrl = getClass().getResource("/com/mycompany/facilitybooking/images/qrcode.png");
                 if (resourceUrl != null) {
                     Image qrImage = new Image(resourceUrl.toExternalForm(), 100, 100, true, true);
                     ImageView qrView = new ImageView(qrImage);
                     facilityBox.getChildren().add(qrView);
                 } else {
-                    // Try alternative loading method as fallback
                     var is = getClass().getResourceAsStream("/com/mycompany/facilitybooking/images/qrcode.png");
                     if (is != null) {
                         Image qrImage = new Image(is, 100, 100, true, true);
